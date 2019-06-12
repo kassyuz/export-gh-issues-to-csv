@@ -50,9 +50,11 @@ def get_issues(name):
                 pages = {rel[6:-1]: url[url.index('<')+1:-1] for url, rel in
                          (link.split(';') for link in
                           r.headers['link'].split(','))}
-                r = requests.get(pages['next'], auth=auth)
+                r = gh_session.get(pages['next'])
+                print(pages['next'])
                 write_issues(r, csvout)
                 if pages['next'] == pages['last']:
+                    print("CSV file was successfully created")
                     break
 
 parser = argparse.ArgumentParser(description="Write GitHub repository issues "
