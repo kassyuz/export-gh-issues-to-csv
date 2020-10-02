@@ -29,9 +29,9 @@ python export-gh-issues-to-jira-with-comments.py kassyuz/this-repo
 ## Github Issues Pre-requirements
 
 For all OPENED issues:
-- Those will be imported
+- All opened issue will be imported
 - The label `no-jira` will exclude these/those particular issues from the migration
 
 For all CLOSED issues:
-- By default those issues will NOT ne imported
+- By default all closed issues will NOT be imported
 - If you want to import a closed issues, it must be labeled with `jira` Label
