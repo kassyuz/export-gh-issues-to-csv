@@ -1,11 +1,9 @@
-# Export repo issues to CSV
+# Export issues from Github Issues to JIRA Cloud
 
-Exports issues from a list of repositories to individual CSV files. Uses OAuth authentication (Github token) to retrieve issues from a repository that username has access to. Supports Github API v3.
+Exports issues from Github Issues directly to JIRA Cloud projects. Uses OAuth authentication (Github token) to retrieve issues from a Github repository that username has access to. Supports Github API v3.
 
-## Fork
+## Fork and based
 Forked from: [unbracketed/export_repo_issues_to_csv.py](https://gist.github.com/unbracketed/3380407)
-
-## Usage
 
 ### Requeriments
 - Python 2.7
@@ -17,7 +15,6 @@ How to generate [Github tokens](https://github.com/settings/tokens)
 
 ~~~~
 python export-gh-issues-to-jira-with-comments.py <organisation name or username>/<repo name>
-
 ~~~~
 
 e.g.
@@ -26,7 +23,7 @@ e.g.
 python export-gh-issues-to-jira-with-comments.py kassyuz/this-repo
 ~~~~
 
-## Github Issues Pre-requirements
+## Preparing your Github Issues Pre-requirements
 
 For all OPENED issues:
 - All opened issue will be imported
