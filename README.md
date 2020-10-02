@@ -16,20 +16,22 @@ How to generate [Github tokens](https://github.com/settings/tokens)
 ### Commands
 
 ~~~~
-python export_repo_issues_to_csv.py --all <organisation name or username>/<repo name>
+python export-gh-issues-to-jira-with-comments.py <organisation name or username>/<repo name>
+
 ~~~~
 
 e.g.
 
 ~~~~
-python export_repo_issues_to_csv.py --all kassyuz/export-gh-issues-to-csv
+python export-gh-issues-to-jira-with-comments.py kassyuz/this-repo
 ~~~~
 
-Parameter `--all` will get all issues, opened and closed issues. The default is only `open` issues.
+## Github Issues Pre-requirements
 
-## CSV file
+For all OPENED issues:
+- Those will be imported
+- The label `no-jira` will exclude these/those particular issues from the migration
 
-It will generate a CSV file called `<organisation name or username>/<repo name>-issues.csv`
-
-e.g.
-`kassyuz/export-gh-issues-to-csv-issues.csv`
+For all CLOSED issues:
+- By default those issues will NOT ne imported
+- If you want to import a closed issues, it must be labeled with `jira` Label
